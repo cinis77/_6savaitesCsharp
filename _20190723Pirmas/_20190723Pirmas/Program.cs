@@ -14,6 +14,14 @@ namespace _20190723Pirmas
             Console.WriteLine("1. Išnešti šiūkšles");
             Console.WriteLine("2. Nupirkti pieno");
             Console.WriteLine("3. Pavedžioti šunį");
+
+            string Vardas = "Dominykas";
+            string Pavarde = "Pavarde";
+            int Amzius = 27;
+
+            Console.WriteLine("{0} {1} ({2} m.)", Vardas, Pavarde, Amzius);
+            Console.WriteLine(Vardas + " " + Pavarde + " (" + Amzius + " m.)");
+            Console.WriteLine("Jo u{0} ");
         }
     }
 }
