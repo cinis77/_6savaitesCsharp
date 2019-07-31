@@ -3,16 +3,28 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace _20190731_prezidentoRinkimai
 {
     internal class Program
     {
+        [STAThread]
         private static void Main(string[] args)
         {
             Console.WriteLine("Iveskite kandidatus");
 
-            string kandidatai = Console.ReadLine();
+            string path = null;
+
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "*.txt|*.txt";
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                path = ofd.FileName;
+            }
+
+            System.IO.StreamReader reader = new System.IO.StreamReader(path);
+            string kandidatai = reader.ReadLine();
             string[] kandidatuMasyvas = kandidatai.Split(' ');
             string kandidatas = kandidatuMasyvas[0];
             char[] raides = kandidatas.ToCharArray();
