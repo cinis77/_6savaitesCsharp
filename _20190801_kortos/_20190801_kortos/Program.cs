@@ -15,7 +15,31 @@ namespace _20190801_kortos
         public Korta(string tipas, string skaicius)
         {
             Tipas = tipas;
-            Skaicius = skaicius;
+            Skaicius = PakeistiIsSkaiciausIRaide(skaicius);
+        }
+
+        private string PakeistiIsSkaiciausIRaide(string sk)
+        {
+            if (sk == "1")
+            {
+                return "A";
+            }
+            else if (sk == "11")
+            {
+                return "B";
+            }
+            else if (sk == "12")
+            {
+                return "D";
+            }
+            else if (sk == "13")
+            {
+                return "K";
+            }
+            else
+            {
+                return sk;
+            }
         }
     }
 
