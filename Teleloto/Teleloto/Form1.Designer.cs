@@ -55,7 +55,11 @@
             this.Ž2 = new System.Windows.Forms.TextBox();
             this.Ž1 = new System.Windows.Forms.TextBox();
             this.Generate = new System.Windows.Forms.Button();
+            this.Game = new System.Windows.Forms.GroupBox();
+            this.Skaiciai = new System.Windows.Forms.TextBox();
+            this.Zaisti = new System.Windows.Forms.Button();
             this.Bilietas.SuspendLayout();
+            this.Game.SuspendLayout();
             this.SuspendLayout();
             // 
             // Bilietas
@@ -278,17 +282,49 @@
             this.Generate.UseVisualStyleBackColor = true;
             this.Generate.Click += new System.EventHandler(this.Generate_Click);
             // 
+            // Game
+            // 
+            this.Game.Controls.Add(this.Zaisti);
+            this.Game.Controls.Add(this.Skaiciai);
+            this.Game.Location = new System.Drawing.Point(13, 243);
+            this.Game.Name = "Game";
+            this.Game.Size = new System.Drawing.Size(308, 170);
+            this.Game.TabIndex = 1;
+            this.Game.TabStop = false;
+            this.Game.Text = "Žaidimas";
+            // 
+            // Skaiciai
+            // 
+            this.Skaiciai.Location = new System.Drawing.Point(7, 20);
+            this.Skaiciai.Multiline = true;
+            this.Skaiciai.Name = "Skaiciai";
+            this.Skaiciai.Size = new System.Drawing.Size(166, 79);
+            this.Skaiciai.TabIndex = 0;
+            // 
+            // Zaisti
+            // 
+            this.Zaisti.Location = new System.Drawing.Point(186, 109);
+            this.Zaisti.Name = "Zaisti";
+            this.Zaisti.Size = new System.Drawing.Size(75, 23);
+            this.Zaisti.TabIndex = 1;
+            this.Zaisti.Text = "Ridenti";
+            this.Zaisti.UseVisualStyleBackColor = true;
+            this.Zaisti.Click += new System.EventHandler(this.Zaisti_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(333, 450);
+            this.Controls.Add(this.Game);
             this.Controls.Add(this.Bilietas);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TeleLoto";
             this.Bilietas.ResumeLayout(false);
             this.Bilietas.PerformLayout();
+            this.Game.ResumeLayout(false);
+            this.Game.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -322,6 +358,9 @@
         private System.Windows.Forms.TextBox M3;
         private System.Windows.Forms.TextBox M2;
         private System.Windows.Forms.TextBox M1;
+        private System.Windows.Forms.GroupBox Game;
+        private System.Windows.Forms.Button Zaisti;
+        private System.Windows.Forms.TextBox Skaiciai;
     }
 }
 
