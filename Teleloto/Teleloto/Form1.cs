@@ -59,7 +59,29 @@ namespace Teleloto
 
         private void Zaisti_Click(object sender, EventArgs e)
         {
-
+            Random rng = new Random();
+            Skaiciai.Text = string.Empty;
+            List<int> jauIsridentiSkaiciai = new List<int>();
+            int i = 0;
+            while (i < 47)
+            {
+                int kamuoliukas = rng.Next(1, 76);
+                bool naujasKamuoliukas = true;
+                foreach (var item in jauIsridentiSkaiciai)
+                {
+                    if (item == kamuoliukas)
+                    {
+                        naujasKamuoliukas = false;
+                        break;
+                    }
+                }
+                if (naujasKamuoliukas)
+                {
+                    Skaiciai.Text += kamuoliukas.ToString() + " ";
+                    i++;
+                    jauIsridentiSkaiciai.Add(kamuoliukas);
+                }
+            }
         }
     }
 }
